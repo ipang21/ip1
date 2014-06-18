@@ -1,0 +1,7 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=61137C34
+eax=00000068 ebx=611208E8 ecx=FFFFFFFE edx=200482B1 esi=611829BF edi=61186CD0
+ebp=00000000 esp=002296C0 program=C:\cygwin\home\Ivan\cpp\ip1\examples\stringparse\test2.out, pid 6128, thread main
+cs=001B ds=0023 es=0023 fs=003B gs=0000 ss=0023
+Stack trace:
+Frame     Function  Args
+End of stack trace
