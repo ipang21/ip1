@@ -8,19 +8,19 @@ class Polygon {
   public:
     void set_values (int a, int b)
       { width=a; height=b; }
-    int area ()
+    virtual int area ()
       { return 0; }
 };
 
 class Rectangle: public Polygon {
   public:
-    int area ()
+    virtual int area ()
       { return width * height; }
 };
 
 class Triangle: public Polygon {
   public:
-    int area ()
+    virtual int area ()
       { return (width * height / 2); }
 };
 
