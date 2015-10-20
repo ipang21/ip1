@@ -22,6 +22,13 @@ Node *newNode(int data)
     return (temp);
 }
 
+qNode *newQNode(Node *nextNode)
+{
+    qNode *temp = (qNode *) malloc(sizeof(qNode));
+    temp->n = nextNode;
+    temp->next = NULL;
+}
+
 Node *createRandTree(int num)
 {
     int i, j, tmp;
@@ -66,8 +73,17 @@ void printTree(Node *root)
 {
     int id = getMaxIndent(root);
     int i;
-    qNode *qHead, *qTail;
+    Node *tmp;
+    qNode *qHead, *qBack;
     printf("got indent = %d\n", id);
+    qHead = newQNode(root);
+    while(qHead != NULL) {
+        qBack = qHead;
+        tmp = (Node *) qHead->n;
+        printf("%d ", tmp->val);
+        qHead = qHead->next;
+        free(qBack);
+    }
 }
 
 int main()
